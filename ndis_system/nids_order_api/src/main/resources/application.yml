@@ -1,0 +1,38 @@
+
+# spring??
+spring:
+  application:
+    #????
+    name: ndis_order_api
+  datasource:
+    #??????4???
+    url: jdbc:mysql://localhost:3306/ndis_db
+    username: root
+    password: zaq1@WSXcde3
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        # ?????SQL??????????SQL
+        format_sql: true
+
+    hibernate:
+      #?????????
+      ddl-auto: update
+      #????Hibernate???SQL??
+    show-sql: true
+
+#  sql:
+#    init:
+#      # enable script initialize function
+#      mode: always
+#      # specify the path of script
+#      data-locations : classpath:script/initialize_data.sql
+
+
+server:
+  port: 8084
+
+jwt:
+  securityKey: 'qwewevczbfdsahaiuer234ku12kadfajakjfakjljakdfiuioqeur'
