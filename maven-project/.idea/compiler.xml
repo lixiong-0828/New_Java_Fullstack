@@ -18,7 +18,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$PROJECT_DIR$/../../Java/apache-maven-3.9.10-bin/apache-maven-3.9.10/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
+          <entry name="$PROJECT_DIR$/../../../Java/apache-maven-3.9.10-bin/apache-maven-3.9.10/repository/org/projectlombok/lombok/1.18.38/lombok-1.18.38.jar" />
         </processorPath>
         <module name="springboot-project-01" />
       </profile>

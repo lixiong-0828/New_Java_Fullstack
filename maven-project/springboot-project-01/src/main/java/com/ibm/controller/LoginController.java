@@ -18,7 +18,7 @@ public class LoginController {
     @Autowired
     private EmpService empService;
 
-    @PostMapping("/login")
+    @GetMapping("/login")
     public Result login(@RequestBody Emp emp) {
 
         log.info("emp={}", emp);
@@ -35,8 +35,8 @@ public class LoginController {
         //return Result.success();
     }
 
-    @PostMapping("/loginById")
-    public Result loginById(@RequestBody  String username, String password) {
+    @GetMapping("/loginById")
+    public Result loginById( String username, String password) {
 
         LogInfo logInfo = empService.loginById(username,password);
 
