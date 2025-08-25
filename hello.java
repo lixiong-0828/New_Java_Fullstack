@@ -9,6 +9,7 @@ public class hello {
     public String hello(String name) {
         System.out.println("hello ~~~ name:" + name);
 	System.out.println("this is test for github branch!!!");
+	System.out.println("this change from branch on github web!!!");	
 
         return "Hello World, name:" + name;
     }
