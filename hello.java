@@ -11,7 +11,8 @@ public class hello {
 	System.out.println("this is test for github branch!!!");
 	System.out.println("this change from branch on github web!!!");	
 	System.out.println("The change 4:  change from domain File hello.java!!!");
-	System.out.println("The change 5:  change in local main and up to web branch!!!");	
+	System.out.println("The change 5:  change in local main and up to web branch!!!");
+	System.out.println("The change 6:  change in local branch and up to web !!!");	
 
 
         return "Hello World, name:" + name;
