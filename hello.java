@@ -8,7 +8,8 @@ public class hello {
     @RequestMapping("/hello")
     public String hello(String name) {
         System.out.println("hello ~~~ name:" + name);
-    	System.out.println("have a change for github upload!!!");
+	System.out.println("this is test for github branch!!!");
+
         return "Hello World, name:" + name;
     }
 }
