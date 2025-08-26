@@ -22,6 +22,7 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         config.addAllowedOrigin("http://localhost:5173"); //允许【Angular】的前端访问
+        config.addAllowedOrigin("http://localhost:88"); //允许【VUE】的前端访问
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         config.setAllowCredentials(true);
