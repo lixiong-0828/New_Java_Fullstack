@@ -22,6 +22,7 @@ public class LoginController {
     public Result login(@RequestBody Emp emp) {
 
         log.info("emp={}", emp);
+        log.info(" Test log for push code to git hub!! Lab: #20280826-002");
 
         LogInfo logInfo = empService.login(emp);
 
