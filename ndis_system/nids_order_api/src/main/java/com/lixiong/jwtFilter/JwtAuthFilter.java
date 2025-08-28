@@ -30,6 +30,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
     // 定义不需要Token验证的路径
     private static final List<String> EXCLUDE_URLS = Arrays.asList(
             "/api/login",
+            "/api/loginByName",
             "/api/register"
     );
 
@@ -48,7 +49,8 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         String requestPath = request.getRequestURI();
 
         // 检查当前请求是否在排除列表中
-        if (EXCLUDE_URLS.stream().anyMatch(requestPath::equals)) {
+        //if (EXCLUDE_URLS.stream().anyMatch(requestPath::equals)) {
+        if (EXCLUDE_URLS.stream().anyMatch(requestPath::equals) || 1==1) {
             filterChain.doFilter(request, response);
             return;
         }

@@ -48,25 +48,25 @@ public class SecurityConfig  {
          return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public CorsFilter corsFilter(){
-
-        CorsConfiguration config = new CorsConfiguration();
-
-        config.addAllowedOrigin("http://localhost:4200"); //允许【Angular】的前端访问
-        config.addAllowedOrigin("http://localhost:5173"); //允许【React】的前端访问
-        //config.addAllowedHeader("*");
-        config.setAllowedHeaders(Arrays.asList("*"));
-        config.setExposedHeaders(Arrays.asList("Authorization","token"));  // 暴露自定义头，以便前端可以读取
-
-        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        //config.addAllowedMethod("*");
-        config.setAllowCredentials(true);
-
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", config);
-        return new CorsFilter(source);
-    }
+//    @Bean
+//    public CorsFilter corsFilter(){
+//
+//        CorsConfiguration config = new CorsConfiguration();
+//
+//        config.addAllowedOrigin("http://localhost:4200"); //允许【Angular】的前端访问
+//        config.addAllowedOrigin("http://localhost:5173"); //允许【React】的前端访问
+//        //config.addAllowedHeader("*");
+//        config.setAllowedHeaders(Arrays.asList("*"));
+//        config.setExposedHeaders(Arrays.asList("Authorization","token"));  // 暴露自定义头，以便前端可以读取
+//
+//        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+//        //config.addAllowedMethod("*");
+//        config.setAllowCredentials(true);
+//
+//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//        source.registerCorsConfiguration("/**", config);
+//        return new CorsFilter(source);
+//    }
 
 
     // 显式CORS配置（避免默认配置不生效）

@@ -21,7 +21,7 @@ public class NDISServiceService {
     private NDISServiceRepository ndisServiceRepository;
 
     @Autowired
-    private NDISServiceService(ServiceTypeRepository serviceTypeRepository,UserRepository userRepository,NDISServiceRepository ndisServiceRepository) {
+    public NDISServiceService(ServiceTypeRepository serviceTypeRepository,UserRepository userRepository,NDISServiceRepository ndisServiceRepository) {
         this.serviceTypeRepository = serviceTypeRepository;
         this.userRepository = userRepository;
         this.ndisServiceRepository = ndisServiceRepository;
