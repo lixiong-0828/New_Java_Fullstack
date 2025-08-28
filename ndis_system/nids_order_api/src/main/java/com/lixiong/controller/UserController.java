@@ -1,0 +1,52 @@
+package com.lixiong.controller;
+
+import com.lixiong.pojo.Result;
+import com.lixiong.pojo.User;
+import com.lixiong.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Slf4j
+@Controller
+@RequestMapping("/user")
+public class UserController {
+
+
+    private UserRepository userRepository;
+
+    @Autowired
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+
+
+    @GetMapping("/getByPhone")
+    public Result getUserByPhone(String phone) {
+
+        log.info( "getUserByPhone " + phone );
+
+        try{
+            return Result.success(userRepository.findByPhone(phone));
+        } catch (Exception e) {
+            return Result.error(e.getMessage());
+        }
+
+
+    }
+
+//    @PutMapping("/putaAll")
+//    public Result updateUser(@RequestBody User user) {
+//        try{
+//            userRepository.Update(user);
+//            return Result.success("success!!");
+//        } catch (Exception e) {
+//            return Result.error(e.getMessage());
+//        }
+//    }
+}
